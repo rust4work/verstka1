@@ -28,8 +28,8 @@
   font-weight: medium;
   font-style: italic;
   src: url(fonts/barlow/Barlow-Regular.otf) format("opentype");
-  font-weight: regular;
-  font-style: regular;
+  font-weight: normal;
+  font-style: normal;
   src: url(fonts/barlow/Barlow-SemiBold.otf) format("opentype");
   font-weight: bold;
   font-style: bold;
@@ -51,6 +51,7 @@ body {
   display: flex;
   margin-top: 50px;
   width: 80%;
+  height: fit-content;
   background-color: white;
 }
 
@@ -137,12 +138,26 @@ body {
 }
 input:focus {
   border-left: 6px solid #2a4a5c;
-  border-top: 1px solid #ccc; /* стандартная граница сверху */
-  border-right: 1px solid #ccc; /* стандартная граница справа */
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 input::placeholder {
   font-size: 10px;
   padding-top: 1px;
   padding-left: 1px;
+}
+
+.choose {
+  margin-top: 50px;
+}
+.choose img {
+  width: 10px;
+  margin-left: 5px;
+}
+.podskazka {
+  padding: 10px;
+  margin: 20px;
+  width: 200px;
+  box-shadow: 10px 10px 20px #a9d3ea;
 }
