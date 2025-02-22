@@ -1,43 +1,33 @@
 @font-face {
   font-family: "MyFont";
-  src: url("fonts/barlow/Barlow-Black.otf") format("opentype");
-  font-weight: normal;
+  src: url("fonts/barlow/Barlow-Bold.otf") format("opentype");
+  font-weight: bolder;
   font-style: normal;
-  src: url(fonts/barlow/Barlow-Extra\ Bold.ttf) format("opentype");
-  font-weight: bold;
-  font-style: bold;
-  src: url(fonts/barlow/Barlow-ExtraLight.otf) format("opentype");
-  font-weight: light;
-  font-style: light;
-  src: url(fonts/barlow/Barlow-ExtraLightItalic.otf) format("opentype");
-  font-weight: light;
-  font-style: italic;
-  src: url(fonts/barlow/Barlow-Italic.otf) format("opentype");
-  font-weight: light;
-  font-style: italic;
-  src: url(fonts/barlow/Barlow-Light.otf) format("opentype");
-  font-weight: light;
-  font-style: light;
-  src: url(fonts/barlow/Barlow-LightItalic.otf) format("opentype");
-  font-weight: light;
-  font-style: italic;
-  src: url(fonts/barlow/Barlow-Medium.otf) format("opentype");
-  font-weight: medium;
-  font-style: medium;
-  src: url(fonts/barlow/Barlow-MediumItalic.otf) format("opentype");
-  font-weight: medium;
-  font-style: italic;
-  src: url(fonts/barlow/Barlow-Regular.otf) format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  src: url(fonts/barlow/Barlow-SemiBold.otf) format("opentype");
-  font-weight: bold;
-  font-style: bold;
-  src: url(fonts/barlow/Barlow-Thin.otf) format("opentype");
-  font-weight: thin;
-  font-style: thin;
 }
-
+@font-face {
+  font-family: "MyFont";
+  src: url("fonts/barlow/Barlow-Light.otf") format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("fonts/barlow/Barlow-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("fonts/barlow/Barlow-Medium.otf") format("opentype");
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("fonts/barlow/Barlow-Thin.otf") format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+}
 body {
   color: #2a4a5c;
   font-family: "Myfont";
@@ -45,19 +35,24 @@ body {
   background-color: #eff6ff;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .main {
   display: flex;
   margin-top: 50px;
-  width: 90%;
+  max-width: 1050px;
+  min-width: 970px;
   height: fit-content;
   background-color: white;
+  gap: 50px;
+  box-sizing: border-box;
 }
 
 .leftside {
   flex: 1;
   position: relative;
+  min-width: 450px;
 }
 .bglogo {
   position: absolute;
@@ -67,6 +62,7 @@ body {
 }
 .bgpic {
   width: 100%;
+  max-width: 490px;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -74,37 +70,45 @@ body {
 
 .rightside {
   flex: 1;
-  margin-left: 20px;
-  padding-top: 8px;
-  font-size: 2vw;
+  padding: 60px 40px 40px 0px;
+  font-size: 18px;
+}
+p {
+  font-size: 14px;
 }
 .register {
   margin-top: 30px;
   display: flex;
-  height: 20px;
+
   gap: 20px;
-  text-align: center;
+}
+.register button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  border: none;
+  max-width: 165px;
+  height: 30px;
+  cursor: pointer;
 }
 .fb {
   flex: 1;
   font-size: 10px;
   color: white;
   background-color: #255a9b;
-  padding-bottom: 20px;
-  max-width: 165px;
 }
 .register img {
-  max-width: 15px;
-  margin-right: px;
+  max-width: 12px;
+  margin-right: 12px;
+  text-align: start;
 }
 .li {
   flex: 1;
   font-size: 10px;
   background-color: #0076b6;
   color: white;
-  padding-bottom: 20px;
   text-align: left;
-  max-width: 165px;
 }
 .or {
   width: 50%;
@@ -131,14 +135,24 @@ body {
   margin-left: 10px;
 }
 
-.data {
+.databig {
   display: flex;
-  height: 30px;
+  height: 35px;
   gap: 10px;
-  border: none;
+}
+.data {
+  position: relative;
+  display: flex;
+}
+.data label {
+  position: absolute;
+  top: 0;
+  left: 7px;
+  font-size: 12px;
+  color: #7b8a92;
 }
 input:focus {
-  border-left: 6px solid #2a4a5c;
+  border-left: 4px solid #2a4a5c;
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -153,24 +167,37 @@ h3 {
 }
 
 .choose {
-  margin-top: 20px;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+}
+.choose label {
+  display: flex;
+  align-items: center;
 }
 .choose img {
   width: 10px;
   margin-left: 5px;
+  margin-right: 20px;
 }
 .podskazka {
-  margin-left: 0;
+  color: #7b8a92;
   justify-content: start;
   padding: 10px;
-  margin: 20px 20px 20px 0px;
+  margin: 30px 20px 60px 10px;
   width: 200px;
-  box-shadow: 10px 10px 20px #a9d3ea;
+  box-shadow: 10px 10px 20px #eeeeee;
+  font-size: 12px;
+}
+.terms {
+  font-size: 14px;
+  color: #7b8a92;
 }
 .create {
   width: 200px;
   height: 50px;
   margin-top: 20px;
+  margin-bottom: 50px;
   background-color: #3698fb;
   color: white;
   border: none;
