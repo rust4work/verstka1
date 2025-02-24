@@ -137,7 +137,7 @@ p {
 
 .databig {
   display: flex;
-  height: 35px;
+  height: 45px;
   gap: 10px;
 }
 .data {
@@ -152,21 +152,18 @@ p {
   color: #7b8a92;
 }
 input:focus {
-  border-left: 4px solid #2a4a5c;
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-color: inherit;
+  border-left: 4px solid #3698fb;
 }
-input::placeholder {
-  font-size: 10px;
-  padding-top: 1px;
-  padding-left: 1px;
+.data input {
+  padding: 7px;
 }
 h3 {
   margin-top: 50px;
 }
 
 .choose {
+  font-weight: bolder;
   margin-top: 45px;
   display: flex;
   align-items: center;
